@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatir_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#e2e2e2"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/title_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="#fff"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="10px"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_fff" />-->
+
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/bottom_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="10dp" />-->
+    <!--</LinearLayout>-->
+    <FrameLayout
+            android:id="@+id/myR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <View
+                android:id="@+id/w_bg"
+                android:layout_marginTop="60dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:minHeight="100dp"
+                android:layout_height="wrap_content"
+        >
+
+        </View>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+
+                    android:id="@+id/title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/top_only_white_corner"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+            >
+
+                <TextView
+                        android:padding="10dp"
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取消"
+                        android:textColor="#4d4d4d"
+                        android:textSize="16dp"/>
+
+                <TextView
+                        android:id="@+id/title_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="标题"
+                        android:textColor="#4d4d4d"
+                        android:textSize="16dp"/>
+
+                <TextView
+                        android:padding="10dp"
+                        android:id="@+id/submit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="right"
+                        android:text="确定"
+                        android:textColor="#333"
+                        android:textSize="16dp"/>
+
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cfcfcf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
+            <LinearLayout
+                    android:background="#fff"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+
+                        android:id="@+id/bottom_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
