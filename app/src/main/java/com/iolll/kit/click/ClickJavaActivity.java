@@ -5,12 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.iolll.kit.BaseActivity;
 import com.iolll.kit.R;
 import com.iolll.liubo.niceutil.NiceUtil;
 import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;
-
+@Route(path = "/click/java/listview")
 public class ClickJavaActivity extends BaseActivity {
 
     @BindView(R.id.rv)

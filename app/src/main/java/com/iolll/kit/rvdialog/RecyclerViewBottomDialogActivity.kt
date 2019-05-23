@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.iolll.kit.R
-import com.iolll.kit.Utils
 import com.iolll.kit.click.TextItem
 import com.iolll.kit.click.TextItemViewBinder
 import com.iolll.liubo.bottomrecyclerdialog.RecyclerBottomDialog
@@ -53,7 +52,6 @@ class RecyclerViewBottomDialogActivity : AppCompatActivity() {
                 .setSubmitBtnName(submitBtnEt.text.toString())
                 .setSubmitListener {
                     it.dismiss()
-                    Utils.toast("www")
                 }
                 .setItems(items)
                 .build()

@@ -1,6 +1,7 @@
 package com.iolll.liubo.crashhandler;
 
 import android.content.Context;
+import android.util.Log;
 import com.iolll.liubo.ifunction.IFunction;
 
 import java.io.File;
@@ -117,7 +118,7 @@ public enum IolllCrashHandler implements Thread.UncaughtExceptionHandler {
 
     private void saveLogAndCrash(Throwable ex) {
         ThrowableMsg throwableMsg = new ThrowableMsg(((InvocationTargetException)ex.getCause()).getTargetException());
-
+        Log.e(TAG, "saveLogAndCrash: "+throwableMsg );
 //        Log.e(TAG, "saveLogAndCrash: "+ex.getMessage() );
 //        Log.e(TAG, "saveLogAndCrash: "+((InvocationTargetException)ex.getCause()).getTargetException().getMessage());
 //        Log.e(TAG, "saveLogAndCrash: "+((InvocationTargetException)ex.getCause()).getTargetException().getStackTrace()[0].getClassName());

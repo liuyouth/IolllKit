@@ -45,9 +45,9 @@ public class RecyclerBottomDialog<T> extends MyBottomSheetDialog {
     CoordinatorLayout coordinatirLayout;
     private Items items = new Items();
     private MultiTypeAdapter adapter = new MultiTypeAdapter();
-    private OnCancelListener cancelListener; // 暂时无用
+    private OnCancelListener cancelListener;
     private OnCancelListener submitListener;
-    private boolean mCancelable;
+    private boolean mCancelable = true;
     private Context context;
     private String titleName;
     private String cancelBtnName;
@@ -56,6 +56,9 @@ public class RecyclerBottomDialog<T> extends MyBottomSheetDialog {
     private boolean showBottomBar = false;
     //    private OnItemAllClickListener onItemClick;
     private int titleBG;
+
+    private int cancelTextColor;
+    private int submitTextColor;
 
     public RecyclerBottomDialog(Builder builder, String s) {
         super(builder.context, builder.mCancelable, builder.cancelListener);
@@ -124,6 +127,10 @@ public class RecyclerBottomDialog<T> extends MyBottomSheetDialog {
             });
             cancelBtn.setVisibility(View.VISIBLE);
         }
+        if (cancelTextColor!=0)
+            cancelBtn.setTextColor(cancelTextColor);
+        if (submitTextColor!=0)
+            submitBtn.setTextColor(submitTextColor);
         setBtnData(cancelBtn,cancelBtnName,cancelListener);
         setBtnData(submitBtn,submitBtnName,submitListener);
 //        if (isNotNull(onItemClick)) {
@@ -167,7 +174,9 @@ public class RecyclerBottomDialog<T> extends MyBottomSheetDialog {
             cancelBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    cancelListener.onCancel(RecyclerBottomDialog.this);
+                    if(null!=cancelListener) {
+                        cancelListener.onCancel(RecyclerBottomDialog.this);
+                    }else dismiss();
                 }
             });
         }
@@ -244,6 +253,25 @@ public class RecyclerBottomDialog<T> extends MyBottomSheetDialog {
         }
     }
 
+    public int getTitleBG() {
+        return titleBG;
+    }
+
+    public int getCancelTextColor() {
+        return cancelTextColor;
+    }
+
+    public void setCancelTextColor(int cancelTextColor) {
+        this.cancelTextColor = cancelTextColor;
+    }
+
+    public int getSubmitTextColor() {
+        return submitTextColor;
+    }
+
+    public void setSubmitTextColor(int submitTextColor) {
+        this.submitTextColor = submitTextColor;
+    }
 //    public OnItemAllClickListener<T> getOnItemClick() {
 //        return onItemClick;
 //    }

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.ButterKnife;
 import me.drakeet.multitype.ItemViewBinder;
 
 /**
@@ -43,7 +42,7 @@ public abstract class BaseClickItemViewBinder<T, VH extends RecyclerView.ViewHol
     public static abstract class BaseViewHolder extends RecyclerView.ViewHolder {
         public BaseViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+//            ButterKnife.bind(this, itemView);
         }
     }
 }

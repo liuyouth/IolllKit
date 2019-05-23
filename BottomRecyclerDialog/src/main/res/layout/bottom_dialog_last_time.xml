@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:text="取消"
                         android:textColor="#4d4d4d"
-                        android:textSize="16dp"/>
+                        android:textSize="14dp"/>
 
                 <TextView
                         android:id="@+id/title_tv"
@@ -103,7 +103,7 @@
                         android:gravity="center"
                         android:text="标题"
                         android:textColor="#4d4d4d"
-                        android:textSize="16dp"/>
+                        android:textSize="15dp"/>
 
                 <TextView
                         android:padding="10dp"
@@ -114,7 +114,7 @@
                         android:gravity="right"
                         android:text="确定"
                         android:textColor="#333"
-                        android:textSize="16dp"/>
+                        android:textSize="14dp"/>
 
             </LinearLayout>
 

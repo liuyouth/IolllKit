@@ -13,6 +13,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".xidingRv.OnTopRvActivity">
+        </activity>
+        <activity android:name=".router.RouterMainActivity">
+        </activity>
+        <activity android:name=".router.RouterNiceBackActivity">
+        </activity>
         <activity android:name=".rvdialog.RecyclerViewBottomDialogActivity">
         </activity>
         <activity

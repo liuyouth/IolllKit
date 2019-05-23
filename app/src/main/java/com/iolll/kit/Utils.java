@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import com.google.gson.Gson;
+import com.iolll.kit.closingback.AllActivitysConfig;
 import com.iolll.liubo.crashhandler.IolllCrashHandler;
 import com.iolll.liubo.niceutil.GsonFactory;
 import com.iolll.liubo.niceutil.NiceContextCallBack;
@@ -148,7 +149,7 @@ public class Utils {
             }
         });
         app.registerActivityLifecycleCallbacks(mCallbacks);
-
+        AllActivitysConfig.init();// 加载页面配置文件
         IolllCrashHandler.INS.init(context);
         DEBUG = BuildConfig.DEBUG;
     }

@@ -48,4 +48,14 @@ public class ThrowableMsg {
     public void setErrorMethodName(String errorMethodName) {
         this.errorMethodName = errorMethodName;
     }
+
+    @Override
+    public String toString() {
+        return "ThrowableMsg{" +
+                "errorMsg='" + errorMsg + '\'' +
+                ", errorClassName='" + errorClassName + '\'' +
+                ", errorClassLineNumber=" + errorClassLineNumber +
+                ", errorMethodName='" + errorMethodName + '\'' +
+                '}';
+    }
 }
