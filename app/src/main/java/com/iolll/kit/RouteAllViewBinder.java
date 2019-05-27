@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.iolll.kit.router.RouteAll;
-
 import com.iolll.liubo.iolllviewx.RecyclerView.BaseClickItemViewBinder;
 import com.iolll.liubo.iolllviewx.RecyclerView.ItemClick;
 

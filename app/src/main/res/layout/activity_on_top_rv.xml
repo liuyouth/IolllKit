@@ -17,23 +17,32 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
+            android:translationY="-100dp"
             android:background="@color/colorAccent"
             android:orientation="vertical"
             android:id="@+id/rv_header_group_layout"
             app:layout_constraintTop_toBottomOf="@+id/toolbarLayout"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:layout_width="match_parent" android:layout_height="50dp">
         <TextView
                 android:padding="10dp"
                 android:id="@+id/onTopHeaderTv"
-                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
-            android:background="#789AFF"
+            android:translationY="-50dp"
+            android:background="@color/colorAccent"
             android:id="@+id/toolbarLayout"
             android:orientation="horizontal"
+            android:gravity="center_vertical"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView
+                android:translationX="50dp"
+                android:padding="10dp"
+                android:text="相关推荐"
+                android:id="@+id/toolbarTv"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

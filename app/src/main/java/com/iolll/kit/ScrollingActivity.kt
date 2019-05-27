@@ -27,7 +27,11 @@ import me.drakeet.multitype.MultiTypeAdapter
 
 class ScrollingActivity : AppCompatActivity() {
     val items = Items()
-
+//    companion object {
+//        fun go(context:Context){
+//            context.startActivity(Intent())
+//        }
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrolling)
@@ -37,6 +41,7 @@ class ScrollingActivity : AppCompatActivity() {
         RouteAll.values().forEach {
             arraylist.add(it.uri)
         }
+
         arraylist.add("/wewe/qwe2")
         showRoutesTextResult(RouterUtil.textingRoutes(this, arraylist)!!)
 
@@ -171,4 +176,5 @@ class ScrollingActivity : AppCompatActivity() {
     fun routerNavigation(url: String): Postcard {
         return ARouter.getInstance().build(url)
     }
+
 }
