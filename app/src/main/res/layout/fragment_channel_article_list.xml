@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.iolll.kit.home.shuidi.ChannelArticleFragment"
+        android:layout_width="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_height="wrap_content"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:overScrollMode="never"
+            android:name="com.iolll.kit.home.shuidi.ChannelArticleFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".home.shuidi.ChannelArticleFragment"
+            tools:listitem="@layout/fragment_channel_article"/>
+</RelativeLayout>

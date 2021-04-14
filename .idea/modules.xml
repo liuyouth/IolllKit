@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BottomRecyclerDialog/BottomRecyclerDialog.iml" filepath="$PROJECT_DIR$/BottomRecyclerDialog/BottomRecyclerDialog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CrashHandler/CrashHandler.iml" filepath="$PROJECT_DIR$/CrashHandler/CrashHandler.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IFunction/IFunction.iml" filepath="$PROJECT_DIR$/IFunction/IFunction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IolllFunction/IolllFunction.iml" filepath="$PROJECT_DIR$/IolllFunction/IolllFunction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IolllKit.iml" filepath="$PROJECT_DIR$/IolllKit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IolllViewX/IolllViewX.iml" filepath="$PROJECT_DIR$/IolllViewX/IolllViewX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NiceClosingBack/NiceClosingBack.iml" filepath="$PROJECT_DIR$/NiceClosingBack/NiceClosingBack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NiceUtil/NiceUtil.iml" filepath="$PROJECT_DIR$/NiceUtil/NiceUtil.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IolllKit-new.iml" filepath="$PROJECT_DIR$/.idea/modules/IolllKit-new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BottomRecyclerDialog/IolllKit-new.BottomRecyclerDialog.iml" filepath="$PROJECT_DIR$/.idea/modules/BottomRecyclerDialog/IolllKit-new.BottomRecyclerDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CrashHandler/IolllKit-new.CrashHandler.iml" filepath="$PROJECT_DIR$/.idea/modules/CrashHandler/IolllKit-new.CrashHandler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IFunction/IolllKit-new.IFunction.iml" filepath="$PROJECT_DIR$/.idea/modules/IFunction/IolllKit-new.IFunction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IolllFunction/IolllKit-new.IolllFunction.iml" filepath="$PROJECT_DIR$/.idea/modules/IolllFunction/IolllKit-new.IolllFunction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IolllViewX/IolllKit-new.IolllViewX.iml" filepath="$PROJECT_DIR$/.idea/modules/IolllViewX/IolllKit-new.IolllViewX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NiceClosingBack/IolllKit-new.NiceClosingBack.iml" filepath="$PROJECT_DIR$/.idea/modules/NiceClosingBack/IolllKit-new.NiceClosingBack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NiceUtil/IolllKit-new.NiceUtil.iml" filepath="$PROJECT_DIR$/.idea/modules/NiceUtil/IolllKit-new.NiceUtil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/allforoneiolllkit/IolllKit-new.allforoneiolllkit.iml" filepath="$PROJECT_DIR$/.idea/modules/allforoneiolllkit/IolllKit-new.allforoneiolllkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/IolllKit-new.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/IolllKit-new.app.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="IolllKit-new.allforoneiolllkit" target="1.8" />
+      <module name="IolllKit-new.app" target="1.8" />
+      <module name="IolllKit-new.BottomRecyclerDialog" target="1.8" />
+      <module name="IolllKit-new.CrashHandler" target="1.8" />
+      <module name="IolllKit-new.IolllFunction" target="1.8" />
+      <module name="IolllKit-new.IolllViewX" target="1.8" />
+      <module name="IolllKit-new.NiceClosingBack" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
