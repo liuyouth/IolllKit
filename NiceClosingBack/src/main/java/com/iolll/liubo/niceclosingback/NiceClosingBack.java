@@ -18,6 +18,10 @@ import static com.iolll.liubo.niceutil.NiceUtil.isNotNull;
 public class NiceClosingBack {
     public static String ACTIVITY_FROM = "ACTIVITY_FROM";
     public static String EMPTYRUN = "emptyRun";
+    public static int animEnterAnim = 0;
+    public static int animExitAnim = 0;
+    //android.R.anim.slide_out_right
+
     /**
      * 传入实现INiceBack的Activity
      *
@@ -32,7 +36,8 @@ public class NiceClosingBack {
                             .subscribe(targetRule ->
                                             AnyRun.ins(finishStartActionMap.get(targetRule.wantActivity)).whenNotNull(contextRun -> {
                                                 contextRun.run(iNiceBack);
-                                                ((Activity) iNiceBack).overridePendingTransition(R.anim.slide_in_left_speed, android.R.anim.slide_out_right);
+                                                if (animEnterAnim!=0 && animExitAnim!=0)
+                                                 ((Activity) iNiceBack).overridePendingTransition(animEnterAnim, animExitAnim);
                                             })
                                     , Throwable::printStackTrace));
     }

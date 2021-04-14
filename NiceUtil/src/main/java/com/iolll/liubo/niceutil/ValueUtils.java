@@ -1,6 +1,6 @@
 package com.iolll.liubo.niceutil;
 
-import static com.iolll.liubo.niceutil.NiceUtil.isEmpty;
+import java.util.List;
 
 /**
  * Created by LiuBo on 2018/12/17.
@@ -37,4 +37,38 @@ public class ValueUtils {
     public static double vDefault(double value, double defaultValue) {
         return 0D == value ? defaultValue : value;
     }
+
+
+    public static boolean isEmpty(Integer value) {
+        return value == null || value == 0;
+    }
+
+    public static boolean isEmpty(Double value) {
+        return value == null || value == 0;
+    }
+
+    public static boolean isEmpty(Float value) {
+        return value == null || value == 0;
+    }
+
+    public static boolean isEmpty(String... strings) {
+        for (String string : strings)
+            if (isEmpty(string))
+                return true;
+        return false;
+    }
+
+    public static <T> boolean  isEmpty(List<T> datas) {
+        return null == datas || datas.isEmpty();
+    }
+
+
+
+
+
+    public static boolean isEmpty(String msg) {
+        return msg == null || msg.length() == 0;
+    }
+
+
 }

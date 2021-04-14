@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constrain_root"
+        tools:context="com.iolll.kit.NiceAnimActivity.NiceAnimMainActivity">
+    <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:id="@+id/PageTitle"
+            android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="30dp">
+        <ImageView
+                android:src="@drawable/svg_home"
+                android:layout_width="30dp" android:layout_height="30dp"/>
+        <TextView
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="NiceAnimActivity"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <ImageView
+            android:id="@+id/image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="160dp"
+            app:layout_constraintTop_toBottomOf="@+id/PageTitle"
+            android:src="@drawable/img"
+            android:layout_width="200dp" android:layout_height="200dp"/>
+    "/>
+    <TextView
+            android:layout_marginRight="40dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="176dp"
+            android:text="这里是来展示ConstraintLayout 中布局转换的来制作Activity转场动画效果的地方"
+            android:id="@+id/showInfoTv"
+            android:layout_width="160dp" android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

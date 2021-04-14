@@ -7,12 +7,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import com.google.gson.Gson;
 import com.iolll.kit.closingback.AllActivitysConfig;
 import com.iolll.liubo.crashhandler.IolllCrashHandler;
+import com.iolll.liubo.crashhandler.ThrowableMsg;
+import com.iolll.liubo.ifunction.IFunction;
 import com.iolll.liubo.niceutil.GsonFactory;
 import com.iolll.liubo.niceutil.NiceContextCallBack;
 import com.iolll.liubo.niceutil.NiceUtil;
@@ -28,6 +32,7 @@ import static com.iolll.liubo.niceutil.NiceUtil.isNotNull;
  * Created by LiuBo on 2019/4/11.
  */
 public class Utils {
+    private static final String TAG = "IolllUtils";
     //    Toast
     public static Gson gson = GsonFactory.create();
     private static Context context;
@@ -151,6 +156,39 @@ public class Utils {
         app.registerActivityLifecycleCallbacks(mCallbacks);
         AllActivitysConfig.init();// 加载页面配置文件
         IolllCrashHandler.INS.init(context);
+        IolllCrashHandler.INS.setOnThrowableMsgRun((IFunction.Run<ThrowableMsg>) throwableMsg -> {
+            Log.e(TAG, "run: "+throwableMsg);
+            SPUtils.getInstance().put(ThrowableMsg.class.getCanonicalName(),throwableMsg);
+        });
+        IolllCrashHandler.INS.setOnUiRun(new IFunction.NullRun() {
+            @Override
+            public void run() {
+                Log.e(TAG, "run: "+"rrrrrrrrrrrrr" );
+                //使用Toast来显示异常信息
+                new Thread() {
+                    @Override
+                    public void run() {
+                        Looper.prepare();
+                        toast("发生异常啦 🦄~~~~");
+                        Looper.loop();
+                    }
+                }.start();
+
+            }
+        });
+        IolllCrashHandler.INS.setOnThrowableRun(throwable -> {
+            Log.e(TAG, "run: "+"setOnThrowableRun" );
+        });
+        IolllCrashHandler.INS.setOnCrashEndRun(()->{
+            Log.e(TAG, "run: "+"setOnCrashEndRun" );
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Log.e(TAG, "uncaughtException: "+ e.getMessage());
+                e.printStackTrace();
+            }
+            startAct(ErrorActivity.class);
+        });
         DEBUG = BuildConfig.DEBUG;
     }
 

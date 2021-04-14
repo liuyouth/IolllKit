@@ -5,13 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.iolll.kit.router.RouteAll;
 import com.iolll.liubo.iolllviewx.RecyclerView.BaseClickItemViewBinder;
 import com.iolll.liubo.iolllviewx.RecyclerView.ItemClick;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by LiuBo on 2019-05-09.
@@ -29,6 +32,7 @@ public class RouteAllViewBinder extends BaseClickItemViewBinder<RouteAll, RouteA
     protected ViewHolder onCreateViewHolder(
             @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.item_page_info_layout, parent, false);
+
         return new ViewHolder(root);
     }
 

@@ -1,1 +1,1 @@
-include ':app', ':IFunction', ':IolllFunction', ':NiceUtil', ':NiceClosingBack', ':CrashHandler', ':BottomRecyclerDialog', ':IolllViewX'
+include ':app', ':IFunction', ':IolllFunction', ':NiceUtil', ':NiceClosingBack', ':CrashHandler', ':BottomRecyclerDialog', ':IolllViewX', ':allforoneiolllkit'

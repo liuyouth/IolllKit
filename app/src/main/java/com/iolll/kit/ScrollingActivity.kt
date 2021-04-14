@@ -47,7 +47,7 @@ class ScrollingActivity : AppCompatActivity() {
 
 
         fab.setOnClickListener {
-
+            throw RuntimeException("😈  啦啦啦啦啦~ ")
             //            ARouter.getInstance().build("/click/java/listview").navigation()
 //            val intent = Intent(this, RecyclerViewBottomDialogActivity::class.java)
 ////            val intent = Intent(this,ClickKotlinActivity::class.java)
@@ -66,7 +66,6 @@ class ScrollingActivity : AppCompatActivity() {
                     viewHolder.itemView.id -> routerNavigation(t.uri).navigation()
                     viewHolder.infoTv.id -> routerNavigation(t.uri).navigation()
                     viewHolder.textName.id -> routerNavigation(t.uri).navigation()
-
                 }
             } else {
                 NiceUtil.forEach<View>(IFunction.Run<View> {

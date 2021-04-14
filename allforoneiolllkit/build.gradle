@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    sourceSets {
+        main {
+
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+//    configurations.all {
+//        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//            def requested = details.requested
+//            if (requested.group == 'androidx.core:core-ktx') {
+//                if (!requested.name.startsWith("multidex")) {
+//                    //这里指定需要统一的依赖版本,这里统一为26.0.0-alpha1
+//                    details.useVersion '1.0.2'
+//                }
+//            }
+//            if (requested.group == 'androidx.appcompat:appcompat') {
+//                if (!requested.name.startsWith("multidex")) {
+//                    //这里指定需要统一的依赖版本,这里统一为26.0.0-alpha1
+//                    details.useVersion '1.0.2'
+//                }
+//            }
+//        }
+//    }
+}
+task clearJar(type: Delete) {
+    print("删除jar")
+    delete 'build/IolllKit.aar'
+}
+
+task makeJar(type: Copy) {
+    from('build/outputs/aar/')
+    into('build/')
+    include('allforoneiolllkit-release.aar')
+    rename('allforoneiolllkit-release.aar', 'IolllKit.aar')
+}
+
+makeJar.dependsOn(clearJar, build)
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.8'
+    implementation('me.drakeet.multitype:multitype:3.2.0', {
+        exclude group: 'com.android.support'
+    })
+    api project(':IolllFunction')
+    api project(':NiceUtil')
+    api project(':NiceClosingBack')
+    api project(':CrashHandler')
+    api project(':BottomRecyclerDialog')
+    api project(':IolllViewX')
+}
