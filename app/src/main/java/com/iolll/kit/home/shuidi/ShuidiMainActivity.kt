@@ -49,20 +49,21 @@ class ShuidiMainActivity : AppCompatActivity() {
 
         items.add(Title("头像", true, true))
         items.add(TitleChildren("子类"))
+        items.add(TitleChildren("子类"))
         channelsEntityList =arrayListOf("推荐","健康科普","养生")
         items.add(TabSuckTop(channelsEntityList,"", isTop = false, isHeader = true))
-        items.add(Title("2019-10-32", false, true))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
-        items.add(Title("2019-10-33", false, true))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
-        items.add(Title("相关推荐", true, true))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
-        items.add(TitleChildren("子类"))
+//        items.add(Title("2019-10-32", false, true))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
+//        items.add(Title("2019-10-33", false, true))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
+//        items.add(Title("相关推荐", true, true))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
+//        items.add(TitleChildren("子类"))
 
 
 //        channelsEntityList.addAll(arrayListOf("推荐"))
@@ -109,13 +110,14 @@ class ShuidiMainActivity : AppCompatActivity() {
             tab?.customView = getTabView(channelsEntityList[i], i, tabLayout.tabCount,this)
         }
         adapter.items = items
-        recyclerView.layoutManager = LinearLayoutManagerX(this)
+//        recyclerView.layoutManager = LinearLayoutManagerX(this)
+        recyclerView.layoutManager = NestedScrollLLM(this)
         recyclerView.addItemDecoration(
             RVDis2(
                 items,
                 toolbarLayout,
                 rv_header_group_layout,
-                recyclerView.layoutManager as LinearLayoutManagerX,
+                recyclerView.layoutManager as NestedScrollLLM,
                 getViBean(), object : TopBarCallBack {
                     override fun callback(view: View, x: Float, title: TabSuckTop) {
 //                        val textView = view.onTopHeaderTv

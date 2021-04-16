@@ -35,7 +35,8 @@ class RVDis2(
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)
         val firstPos = layoutManage.findFirstVisibleItemPosition()
-        val secondPos = layoutManage.findFirstVisibleItemPosition() + 1
+        val secondPos = 3;
+//        val secondPos = layoutManage.findFirstVisibleItemPosition() + 1
         val endPos = layoutManage.findLastVisibleItemPosition()
         val fristHeaderPos = virtualFamily.childParentPosition(firstPos)
         val secondHeaderPos = virtualFamily.childParentPosition(secondPos)
@@ -77,7 +78,7 @@ class RVDis2(
                                 if (toTop <= toolbarBottomY) {
                                     secondTitleTouchedToolbar(
                                         view!!,
-                                        getTitle(secondHeaderPos), toTop.toFloat(),
+                                        getTitle(secondHeaderPos) as TabSuckTop?, toTop.toFloat(),
                                         if (fristHeaderPos != -1) (items[fristHeaderPos] as Title) else null,
                                         layout, toolbar, callBack
                                     )
@@ -243,7 +244,7 @@ class RVDis2(
      */
     fun secondTitleTouchedToolbar(
         view: View,
-        title: Title?,
+        title: TabSuckTop?,
         y: Float,
         headerTitle: Title?,
         headerView: View,
